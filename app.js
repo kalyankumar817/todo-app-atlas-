@@ -9,7 +9,9 @@ const app = express();
 
 // Middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: '*', // Allow all origins or specify specific origins
+}));
 
 // Environment variables
 const port = process.env.PORT;
